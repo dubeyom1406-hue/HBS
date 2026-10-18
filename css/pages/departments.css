@@ -39,7 +39,7 @@
 }
 
 .department-card h3 {
-  font: 700 14px Manrope,sans-serif;
+  font: 700 14px "Segoe UI", Arial, sans-serif;
   margin: 0 0 7px;
 }
 
@@ -76,7 +76,7 @@
 }
 
 .department-card h3 {
-  font-family: "Outfit","Manrope",sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
 }
 
 .department-card {
@@ -170,7 +170,7 @@
 
 .department-detail-heading h2 {
   margin: 5px 0 3px;
-  font: 700 22px "Outfit","Manrope",sans-serif;
+  font: 700 22px "Segoe UI", Arial, sans-serif;
 }
 
 .department-detail-heading p {

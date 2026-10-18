@@ -34,8 +34,10 @@
     const statusCanvas = $("#statusChart");
     const priorityCanvas = $("#priorityChart");
     if (!BHGS.charts.hasCharts()) {
-      BHGS.charts.chartFallback(statusCanvas);
-      BHGS.charts.chartFallback(priorityCanvas);
+      const canvases = [statusCanvas, priorityCanvas].filter(Boolean);
+      BHGS.charts.loadCharts()
+        .then(() => { if (canvases.some((canvas) => canvas.isConnected)) page.paint(); })
+        .catch(() => canvases.forEach(BHGS.charts.chartFallback));
       return;
     }
     const complaints = store.data.complaints;

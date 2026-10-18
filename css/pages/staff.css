@@ -100,7 +100,7 @@
 .staff-profile-heading h2 {
   margin: 5px 0;
   color: var(--text);
-  font: 700 23px "Outfit","Manrope",sans-serif;
+  font: 700 23px "Segoe UI", Arial, sans-serif;
 }
 
 .staff-profile-heading p {

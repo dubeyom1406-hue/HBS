@@ -110,6 +110,35 @@
   /** True when the Chart.js library finished loading (it comes from a CDN). */
   const hasCharts = () => typeof global.Chart === "function";
 
+  let chartsPromise;
+  function loadCharts() {
+    if (hasCharts()) return Promise.resolve();
+    if (!chartsPromise) {
+      chartsPromise = new Promise((resolve, reject) => {
+        const script = document.createElement("script");
+        script.src = "https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.js";
+        script.crossOrigin = "anonymous";
+        script.referrerPolicy = "no-referrer";
+        script.onload = () => {
+          if (hasCharts()) {
+            resolve();
+            return;
+          }
+          chartsPromise = null;
+          script.remove();
+          reject(new Error("Chart.js loaded without its chart library."));
+        };
+        script.onerror = () => {
+          chartsPromise = null;
+          script.remove();
+          reject(new Error("Chart.js could not be loaded."));
+        };
+        document.head.append(script);
+      });
+    }
+    return chartsPromise;
+  }
+
   /** Shown inside a chart box when Chart.js could not be loaded (for example when offline). */
   function chartFallback(canvas) {
     if (!canvas || canvas.parentNode.querySelector(".chart-fallback")) return;
@@ -120,5 +149,5 @@
   }
 
   BHGS.createPage = createPage;
-  BHGS.charts = { hasCharts, chartFallback };
+  BHGS.charts = { hasCharts, loadCharts, chartFallback };
 })(window);

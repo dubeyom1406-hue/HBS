@@ -30,7 +30,7 @@
 .admin-profile-identity h2 {
   margin: 5px 0;
   color: var(--text);
-  font: 700 24px "Outfit","Manrope",sans-serif;
+  font: 700 24px "Segoe UI", Arial, sans-serif;
 }
 
 .admin-profile-identity p {

@@ -60,7 +60,12 @@
   function drawCharts(page) {
     const canvas = $("#activityChart");
     if (!canvas) return;
-    if (!BHGS.charts.hasCharts()) return BHGS.charts.chartFallback(canvas);
+    if (!BHGS.charts.hasCharts()) {
+      BHGS.charts.loadCharts()
+        .then(() => { if (canvas.isConnected) page.paint(); })
+        .catch(() => BHGS.charts.chartFallback(canvas));
+      return;
+    }
 
     const labels = [];
     const received = [];
