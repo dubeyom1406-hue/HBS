@@ -1,0 +1,34 @@
+/*
+ * reports.css — styles used only by the Reports & analytics page.
+ * Loaded after base.css.
+ */
+
+.priority-bar {
+  height: 6px;
+  border-radius: 10px;
+  background: #f0f2f7;
+  overflow: hidden;
+  min-width: 70px;
+}
+
+.priority-bar span {
+  height: 100%;
+  display: block;
+  border-radius: 10px;
+  background: var(--primary);
+}
+
+.priority-bar span {
+  background: var(--ink);
+}
+
+
+.workload-name { color: var(--text); }
+
+.workload-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.priority-bar.workload-bar { width: 120px; }

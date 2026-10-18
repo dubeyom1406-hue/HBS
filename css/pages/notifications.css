@@ -1,0 +1,76 @@
+/*
+ * notifications.css — styles used only by the Notifications page.
+ * Loaded after base.css.
+ */
+
+.notification-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.notification-row {
+  display: flex;
+  gap: 13px;
+  padding: 17px 20px;
+  border-bottom: 1px solid #f0f2f7;
+  align-items: flex-start;
+}
+
+.notification-row:last-child {
+  border-bottom: 0;
+}
+
+.notification-row.unread {
+  background: #fbfcff;
+}
+
+.notification-copy {
+  flex: 1;
+}
+
+.notification-copy strong {
+  display: block;
+  font-size: 11px;
+  margin: 1px 0 6px;
+}
+
+.notification-copy p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.notification-copy small {
+  display: block;
+  color: #a0aabc;
+  font-size: 9px;
+  margin-top: 8px;
+}
+
+.unread-dot {
+  width: 7px;
+  height: 7px;
+  background: var(--primary);
+  border-radius: 50%;
+  margin-top: 5px;
+}
+
+.unread-dot {
+  background: var(--ink);
+}
+
+.notification-copy strong {
+  font-size: 15.5px;
+}
+
+.notification-copy p {
+  font-size: 14px;
+}
+
+.notification-copy small {
+  font-size: 12.5px;
+}
+
+
+.read-label { font-size: 9px; }

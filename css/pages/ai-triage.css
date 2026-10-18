@@ -1,0 +1,61 @@
+/*
+ * ai-triage.css — styles used only by the AI triage demo page.
+ * Loaded after base.css.
+ */
+
+.split-panel {
+  display: grid;
+  grid-template-columns: minmax(0,1.3fr) minmax(280px,.8fr);
+  gap: 18px;
+}
+
+.info-panel {
+  padding: 22px;
+}
+
+.info-panel h3 {
+  font: 700 15px Manrope,sans-serif;
+  margin: 0 0 7px;
+}
+
+.info-panel>p {
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0 0 20px;
+}
+
+@media(max-width:950px) {
+  .split-panel {
+    grid-template-columns: 1fr;
+  }
+}
+
+.info-panel h3 {
+  font-family: "Outfit","Manrope",sans-serif;
+}
+
+.info-panel h3 {
+  font-size: 19px;
+}
+
+.info-panel>p {
+  font-size: 14px;
+}
+
+
+.limitation-note {
+  font-size: 10px;
+  color: var(--muted);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.result-disclaimer {
+  font-size: 9px;
+  color: #9b7480;
+  line-height: 1.6;
+  margin: 12px 0 0;
+}
+
+.result-action { margin-top: 12px; }

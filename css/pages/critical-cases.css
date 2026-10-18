@@ -1,0 +1,23 @@
+/*
+ * critical-cases.css — styles used only by the Critical cases page.
+ * Loaded after base.css.
+ */
+
+
+.card.priority-notice {
+  padding: 15px 18px;
+  margin-bottom: 16px;
+  background: #fff8f8;
+  border-color: #f8dfe2;
+}
+
+.priority-notice strong {
+  font-size: 11px;
+  color: #c74f5e;
+}
+
+.priority-notice p {
+  font-size: 10px;
+  color: #a96e76;
+  margin: 5px 0 0;
+}

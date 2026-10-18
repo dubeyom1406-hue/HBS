@@ -1,0 +1,15 @@
+/*
+ * activity-log.css — styles used only by the Activity log page.
+ * Loaded after base.css.
+ */
+
+
+.data-table .audit-action { color: var(--text); }
+
+.data-table .audit-detail {
+  font-size: 9px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.audit-id { color: var(--muted); }

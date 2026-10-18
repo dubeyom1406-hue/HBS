@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f9fc">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Operations Admin · Bihar Healthcare Grievance System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/pages/admin-profile.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="index.html" aria-label="Bihar Healthcare Grievance System home"><img src="assets/bihar-healthcare-logo.png" alt="Bihar Healthcare Grievance System — Government of Bihar"></a>
+      <div class="side-label">WORKSPACE</div>
+      <nav class="nav-list" aria-label="Main navigation">
+        <a class="nav-item" href="index.html"><span>Overview</span></a>
+        <a class="nav-item" href="departments.html"><span>Departments</span><span class="nav-count" id="departmentNavCount">0</span></a>
+        <a class="nav-item" href="staff.html"><span>Doctors &amp; Staff</span></a>
+        <a class="nav-item" href="complaints.html"><span>Complaints</span><span class="nav-count" id="complaintNavCount">0</span></a>
+        <a class="nav-item" href="critical-cases.html"><span>Critical cases</span></a>
+        <a class="nav-item" href="ai-triage.html"><span>AI triage demo</span></a>
+        <div class="side-label side-label-spaced">INSIGHTS &amp; SYSTEM</div>
+        <a class="nav-item" href="reports.html"><span>Reports &amp; analytics</span></a>
+        <a class="nav-item" href="notifications.html"><span>Notifications</span><span class="nav-count" id="notificationNavCount">0</span></a>
+        <a class="nav-item" href="activity-log.html"><span>Activity log</span></a>
+        <a class="nav-item" href="settings.html"><span>Settings</span></a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="user-mini"><a class="user-profile-link" href="admin-profile.html" aria-current="page"><span class="avatar avatar-indigo">OD</span><span class="user-mini-copy"><strong>Operations Admin</strong><small>Administrator · Demo</small></span></a><button type="button" class="icon-button" id="profileMenu" aria-label="Operations Admin profile">•••</button></div>
+      </div>
+    </aside>
+    <main class="main-area">
+      <header class="topbar">
+        <div class="topbar-left"><button type="button" class="icon-button mobile-menu" id="mobileMenu" aria-label="Toggle sidebar" title="Toggle sidebar">☰</button><div class="breadcrumb"><span>Workspace</span><span class="crumb-sep">/</span><strong>Operations Admin profile</strong></div></div>
+        <div class="topbar-actions">
+          <button type="button" class="add-pill" data-action="new-complaint"><span>+</span> New complaint</button>
+          <div class="system-status" title="Live time in India Standard Time"><span class="status-pulse"></span><time class="live-clock-full" id="liveClock" aria-live="off"></time><time class="live-clock-time" id="liveClockTime" aria-live="off"></time></div>
+          <button type="button" class="icon-button notification-button" id="topNotifications" aria-label="Notifications">♧<i></i></button>
+          <a class="avatar avatar-indigo avatar-top profile-avatar-link" href="admin-profile.html" aria-label="Operations Admin profile" aria-current="page">OD</a>
+        </div>
+      </header>
+      <div class="page-content" id="pageContent" tabindex="-1"><noscript><p>This application needs JavaScript to run.</p></noscript></div>
+      <footer class="app-footer"><span>Bihar Healthcare Grievance System</span><span>Sample workspace data is saved in this browser</span></footer>
+    </main>
+  </div>
+  <button type="button" class="sidebar-scrim" id="sidebarScrim" aria-label="Close navigation" hidden></button>
+  <div class="toast-region" id="toastRegion" aria-live="polite"></div>
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <header class="modal-header"><div><div class="eyebrow" id="modalEyebrow">WORKSPACE</div><h2 id="modalTitle">Edit record</h2></div><button type="button" class="icon-button" id="modalClose" aria-label="Close dialog">×</button></header>
+      <div class="modal-body" id="modalBody"></div>
+      <footer class="modal-footer" id="modalFooter"></footer>
+    </section>
+  </div>
+  <script src="js/core/api-config.js"></script>
+  <script src="js/core/api.js"></script>
+  <script src="js/core/store.js"></script>
+  <script src="js/core/utils.js"></script>
+  <script src="js/core/ui.js"></script>
+  <script src="js/core/records.js"></script>
+  <script src="js/core/layout.js"></script>
+  <script src="js/core/page.js"></script>
+  <script src="js/pages/admin-profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,437 @@
+/*
+ * staff.css — styles used only by the Doctors & Staff page.
+ * Loaded after base.css.
+ */
+
+/* The staff table uses the shared table components from base.css. */
+
+.export-menu {
+  position: relative;
+}
+
+.export-menu-trigger {
+  min-width: 112px;
+}
+
+.export-menu-options {
+  position: absolute;
+  z-index: 15;
+  top: calc(100% + 8px);
+  right: 0;
+  display: grid;
+  min-width: 180px;
+  padding: 6px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 14px 32px rgba(23,36,59,.16);
+}
+
+.export-menu-options[hidden] {
+  display: none;
+}
+
+.export-menu-option {
+  width: 100%;
+  padding: 10px 12px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text);
+  text-align: left;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.export-menu-option:hover,
+.export-menu-option:focus-visible {
+  background: #f2f4fa;
+}
+
+.staff-row {
+  cursor: pointer;
+}
+
+.staff-profile-name {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.staff-profile-name:hover strong {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.staff-profile-name strong,
+.staff-profile-name small {
+  display: block;
+}
+
+.staff-profile-name small {
+  margin-top: 4px;
+  color: var(--muted);
+}
+
+.staff-profile-hero {
+  padding: 24px;
+  margin-bottom: 18px;
+  background: linear-gradient(135deg,#f0efff,#f8faff 75%);
+}
+
+.staff-profile-heading {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.staff-profile-heading .cell-avatar {
+  width: 54px;
+  height: 54px;
+  border-radius: 17px;
+  font-size: 16px;
+}
+
+.staff-profile-heading > div:nth-child(2) {
+  flex: 1;
+  min-width: 0;
+}
+
+.staff-profile-heading h2 {
+  margin: 5px 0;
+  color: var(--text);
+  font: 700 23px "Outfit","Manrope",sans-serif;
+}
+
+.staff-profile-heading p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.staff-profile-summary {
+  display: grid;
+  grid-template-columns: repeat(4,minmax(0,1fr));
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.staff-profile-summary > div {
+  padding: 14px;
+  border-radius: 14px;
+  background: rgba(255,255,255,.75);
+}
+
+.staff-profile-summary strong,
+.staff-profile-summary span {
+  display: block;
+}
+
+.staff-profile-summary strong {
+  color: var(--text);
+  font-size: 19px;
+}
+
+.staff-profile-summary span {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.staff-profile-grid {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 18px;
+}
+
+.staff-role-duties {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--text);
+  line-height: 1.8;
+}
+
+.staff-role-duties li + li {
+  margin-top: 7px;
+}
+
+.staff-profile-note {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.65;
+}
+
+.staff-profile-workload {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 9px;
+}
+
+.staff-profile-workload > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 11px;
+  background: #f7f8fc;
+}
+
+.staff-profile-workload span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.staff-profile-workload strong {
+  color: var(--text);
+  font-size: 17px;
+}
+
+.staff-profile-fields {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 0 18px;
+  margin: 0;
+}
+
+.staff-profile-fields > div {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+  min-width: 0;
+}
+
+.staff-profile-fields dt {
+  margin-bottom: 6px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.staff-profile-fields dd {
+  margin: 0;
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.staff-profile-fields dd a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.staff-profile-fields dd a:hover {
+  text-decoration: underline;
+}
+
+.staff-profile-department {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 15px;
+  border-radius: 14px;
+  background: #f7f8fc;
+}
+
+.staff-profile-department strong,
+.staff-profile-department span,
+.staff-profile-department small {
+  display: block;
+}
+
+.staff-profile-department strong {
+  font-size: 14px;
+}
+
+.staff-profile-department span,
+.staff-profile-department small {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.staff-profile-department a,
+.staff-profile-link {
+  flex: 0 0 auto;
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.staff-profile-department a:hover,
+.staff-profile-link:hover {
+  text-decoration: underline;
+}
+
+.staff-profile-cases {
+  display: grid;
+  gap: 9px;
+}
+
+.staff-profile-colleagues {
+  display: grid;
+  gap: 9px;
+}
+
+.staff-profile-colleagues > a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 12px;
+  background: #f7f8fc;
+  color: inherit;
+  text-decoration: none;
+}
+
+.staff-profile-colleagues > a:hover {
+  background: #f0f2fa;
+}
+
+.staff-profile-colleagues strong,
+.staff-profile-colleagues small {
+  display: block;
+}
+
+.staff-profile-colleagues strong {
+  font-size: 13px;
+}
+
+.staff-profile-colleagues small {
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.staff-profile-case {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 12px;
+  background: #f7f8fc;
+  color: inherit;
+  text-decoration: none;
+}
+
+.staff-profile-case:hover {
+  background: #f0f2fa;
+}
+
+.staff-profile-case strong,
+.staff-profile-case small {
+  display: block;
+}
+
+.staff-profile-case strong {
+  font-size: 13px;
+}
+
+.staff-profile-case small {
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.staff-case-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 6px;
+}
+
+.staff-profile-link {
+  display: inline-block;
+  margin-top: 14px;
+}
+
+@media(max-width:750px) {
+  .staff-profile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .staff-profile-summary {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+}
+
+@media(max-width:480px) {
+  .staff-profile-hero {
+    padding: 18px;
+  }
+
+  .staff-profile-heading {
+    align-items: flex-start;
+  }
+
+  .staff-profile-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .staff-profile-workload {
+    grid-template-columns: 1fr;
+  }
+
+  .staff-profile-case,
+  .staff-profile-department {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .staff-case-badges {
+    justify-content: flex-start;
+  }
+}
+
+@media print {
+  @page {
+    margin: 14mm;
+  }
+
+  html,
+  body,
+  .app-shell,
+  .main-area,
+  .page-content {
+    width: auto !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #fff !important;
+    color: #111 !important;
+  }
+
+  .sidebar,
+  .topbar,
+  .app-footer,
+  .sidebar-scrim,
+  .toast-region,
+  .modal-backdrop,
+  .page-heading .heading-actions {
+    display: none !important;
+  }
+
+  .page-heading {
+    margin: 0 0 12px !important;
+    padding: 0 0 12px !important;
+  }
+
+  .page-heading h1,
+  .staff-profile-heading h2,
+  .card-title {
+    color: #111 !important;
+  }
+
+  .staff-profile-hero,
+  .staff-profile-grid > .card {
+    margin-bottom: 12px !important;
+    border: 1px solid #d6d6d6 !important;
+    background: #fff !important;
+    box-shadow: none !important;
+    break-inside: avoid;
+  }
+}

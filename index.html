@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f9fc">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Overview · Bihar Healthcare Grievance System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/pages/index.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="index.html" aria-label="Bihar Healthcare Grievance System home"><img src="assets/bihar-healthcare-logo.png" alt="Bihar Healthcare Grievance System — Government of Bihar"></a>
+      <div class="side-label">WORKSPACE</div>
+      <nav class="nav-list" aria-label="Main navigation">
+        <a class="nav-item active" href="index.html" aria-current="page"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="2"/><rect x="14" y="3" width="7" height="5" rx="2"/><rect x="14" y="12" width="7" height="9" rx="2"/><rect x="3" y="16" width="7" height="5" rx="2"/></svg></span><span>Overview</span></a>
+        <a class="nav-item" href="departments.html"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V6l8-3 8 3v15"/><path d="M9 21v-5h6v5M9 10h.01M15 10h.01M12 10h.01"/></svg></span><span>Departments</span><span class="nav-count" id="departmentNavCount">8</span></a>
+        <a class="nav-item" href="staff.html"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="4"/><path d="M4 21c0-4 3.5-7 8-7s8 3 8 7"/></svg></span><span>Doctors &amp; Staff</span></a>
+        <a class="nav-item" href="complaints.html"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></span><span>Complaints</span><span class="nav-count" id="complaintNavCount">0</span></a>
+        <a class="nav-item" href="critical-cases.html"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V4M5 4h11l-2 4 2 4H5"/></svg></span><span>Critical cases</span><span class="nav-dot"></span></a>
+        <a class="nav-item" href="ai-triage.html"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M18.4 5.6l-2.8 2.8M8.4 15.6l-2.8 2.8"/></svg></span><span>AI triage demo</span></a>
+        <div class="side-label side-label-spaced">INSIGHTS &amp; SYSTEM</div>
+        <a class="nav-item" href="reports.html"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg></span><span>Reports &amp; analytics</span></a>
+        <a class="nav-item" href="notifications.html"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9a6 6 0 0 1 12 0c0 6 2 7 2 7H4s2-1 2-7z"/><path d="M10 20a2 2 0 0 0 4 0"/></svg></span><span>Notifications</span><span class="nav-count" id="notificationNavCount">3</span></a>
+        <a class="nav-item" href="activity-log.html"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span>Activity log</span></a>
+        <a class="nav-item" href="settings.html"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg></span><span>Settings</span></a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="support-card"><div class="support-icon">?</div><strong>Need a hand?</strong><p>Explore the demo guide and learn your way around.</p><button type="button" class="text-button" id="openGuide">Open quick guide <span>↗</span></button></div>
+        <div class="user-mini"><a class="user-profile-link" href="admin-profile.html" aria-label="Open Operations Admin profile"><span class="avatar avatar-indigo">OD</span><span class="user-mini-copy"><strong>Operations Admin</strong><small>Administrator · Demo</small></span></a><button type="button" class="icon-button" id="profileMenu" aria-label="Operations Admin profile">•••</button></div>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <div class="topbar-left"><button type="button" class="icon-button mobile-menu" id="mobileMenu" aria-label="Toggle sidebar" title="Toggle sidebar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h10M4 17h16"/></svg></button><div class="breadcrumb"><span>Workspace</span><span class="crumb-sep">/</span><strong id="breadcrumbCurrent">Overview</strong></div><label class="top-search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="globalSearch" type="search" placeholder="Search complaints…" autocomplete="off"></label></div>
+        <div class="topbar-actions">
+          <button type="button" class="add-pill" data-action="new-complaint"><span>+</span> New complaint</button>
+          <div class="system-status" title="Live time in India Standard Time"><span class="status-pulse"></span><time class="live-clock-full" id="liveClock" aria-live="off"></time><time class="live-clock-time" id="liveClockTime" aria-live="off"></time></div>
+          <button type="button" class="icon-button notification-button" id="topNotifications" aria-label="Notifications"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9a6 6 0 0 1 12 0c0 6 2 7 2 7H4s2-1 2-7z"/><path d="M10 20a2 2 0 0 0 4 0"/></svg><i></i></button>
+          <a class="avatar avatar-indigo avatar-top profile-avatar-link" href="admin-profile.html" aria-label="Open Operations Admin profile">OD</a>
+        </div>
+      </header>
+      <div class="page-content" id="pageContent" tabindex="-1"><noscript><p>This application needs JavaScript to run.</p></noscript></div>
+      <footer class="app-footer"><span>Bihar Healthcare Grievance System</span><span>Sample workspace data is saved in this browser</span></footer>
+    </main>
+  </div>
+
+  <button type="button" class="sidebar-scrim" id="sidebarScrim" aria-label="Close navigation" hidden></button>
+  <div class="toast-region" id="toastRegion" aria-live="polite"></div>
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <header class="modal-header"><div><div class="eyebrow" id="modalEyebrow">WORKSPACE</div><h2 id="modalTitle">Edit record</h2></div><button type="button" class="icon-button" id="modalClose" aria-label="Close dialog">×</button></header>
+      <div class="modal-body" id="modalBody"></div>
+      <footer class="modal-footer" id="modalFooter"></footer>
+    </section>
+  </div>
+  <script src="js/core/api-config.js"></script>
+  <script src="js/core/api.js"></script>
+  <script src="js/core/store.js"></script>
+  <script src="js/core/utils.js"></script>
+  <script src="js/core/ui.js"></script>
+  <script src="js/core/records.js"></script>
+  <script src="js/core/layout.js"></script>
+  <script src="js/core/page.js"></script>
+  <script src="js/pages/index.js"></script>
+</body>
+</html>
